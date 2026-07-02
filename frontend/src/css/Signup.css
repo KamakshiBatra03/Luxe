@@ -1,0 +1,131 @@
+/* src/css/Signup.css */
+
+.signup-screen-overlay {
+    background-color: #0d0d0d;
+    min-height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.signup-card {
+    background: #1a1a1a;
+    width: 100%;
+    max-width: 480px; /* Slightly wider than login for the side-by-side passwords */
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.signup-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.signup-header p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+/* Side-by-side inputs for password and confirm */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+    font-weight: 600;
+}
+
+.signup-form input {
+    background: #252525;
+    border: 1px solid #333;
+    padding: 14px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.signup-form input:focus {
+    border-color: #d14d72;
+    box-shadow: 0 0 12px rgba(209, 77, 114, 0.15);
+}
+
+.signup-submit-btn {
+    margin-top: 15px;
+    padding: 16px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-submit-btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.signup-msg {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.signup-msg.success { color: #4caf50; background: rgba(76, 175, 80, 0.1); }
+.signup-msg.error { color: #f44336; background: rgba(244, 67, 54, 0.1); }
+
+.signup-footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.signup-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 5px;
+    border-bottom: 1px solid #444;
+}
+
+.signup-footer a:hover {
+    border-color: #fff;
+}
+
+/* Mobile responsive for the password row */
+@media (max-width: 400px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}

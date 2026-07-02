@@ -1,0 +1,102 @@
+/* src/css/Hero.css */
+.hero-section {
+    height: 80vh; /* Takes up 80% of the screen height */
+    height: calc(100vh - 70px);
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    margin: 0; 
+    position: relative;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    margin-top: -100px;
+    
+}
+
+.hero-badge {
+   background: rgba(255, 255, 255, 0.2);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 19px;
+    color: white;
+    font-weight: 700;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin: 20px 0;
+    line-height: 1.1;
+    font-weight: 800;
+    color: white;
+}
+
+.hero-title span {
+    color: #d946ef;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    z-index: 10; 
+}
+
+.btn-fill {
+    background: #d946ef;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.dash{
+  padding-top: 20px;
+  color: gray;
+}
+.btn-fill, .btn-outline {
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none; /* Removes underline */
+    transition: 0.3s ease;
+    display: inline-block;
+}
+.btn-fill, .btn-outline {
+    pointer-events: auto !important; /* Ensure this isn't set to 'none' */
+    cursor: pointer;
+}
+.hero-buttons {
+    position: relative;
+    z-index: 999; /* Ensures it sits above any invisible overlays */
+    pointer-events: all !important; 
+}
+
+.btn-fill, .btn-outline {
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+}

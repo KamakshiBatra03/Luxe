@@ -1,0 +1,27 @@
+/* App.css */
+:root {
+  --bg-color: #0f1111;
+  --card-bg: #1a1c1e;
+  --accent-blue: #3b82f6;
+  --text-white: #ffffff;
+  --text-gray: #a1a1aa;
+}
+
+body {
+  background-color: gray;
+  color: var(--text-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Extra safety for horizontal */
+}

@@ -1,0 +1,69 @@
+/* src/css/ProductList.css */
+.bento-wrapper {
+    background-color: #ffffff;
+    padding: 60px 5%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.product-bento-grid {
+    display: grid;
+    /* 3 Column layout */
+    grid-template-columns: repeat(3, 1fr);
+    /* Base height for a single 'unit' */
+    grid-auto-rows: 280px; 
+    gap: 25px;
+}
+
+/* Bento Sizing Rules */
+.bento-item {
+    border-radius: 28px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Specific Sizes based on the Reference Image */
+.bento-tall { grid-row: span 2; }
+.bento-large { grid-row: span 2; }
+.bento-wide { grid-column: span 1; }
+
+/* Themes to match the image */
+.bento-dark { background-color: #1a1c1e; color: white; }
+.bento-black { background-color: #000000; color: white; }
+.bento-orange { background-color: #ff7d54; color: white; }
+.bento-light { 
+    background-color: #f8f9fa; 
+    color: #1a1a1a; 
+    border: 1px solid #eeeeee; 
+}
+
+/* Fix for internal ProductCard to fill the bento box */
+.bento-item > div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {
+    .product-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-bento-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+    .bento-item { grid-row: span 1 !important; grid-column: span 1 !important; }
+}

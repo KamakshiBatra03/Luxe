@@ -1,0 +1,127 @@
+/* src/css/CheckoutPage.css */
+
+.checkout-screen-overlay {
+    background-color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    color: #fff;
+}
+
+.checkout-card {
+    background: #1a1a1a;
+    width: 100%;
+    max-width: 500px; /* Slimmer card for the form */
+    padding: 20px 40px;
+    border-radius: 24px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    height: 630px;
+}
+
+.checkout-header {
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+    height: 70px;
+}
+
+.checkout-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.back-to-cart {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.back-to-cart:hover { color: #fff; }
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666;
+    font-weight: 600;
+}
+
+/* --- THE INPUT FIELDS --- */
+.checkout-form input, 
+.checkout-form textarea, 
+.checkout-form select {
+    background: #252525;
+    border: 1px solid #333;
+    padding: 14px;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.checkout-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.checkout-form input:focus, 
+.checkout-form textarea:focus {
+    border-color: #d14d72; /* Pinkish-red accent from detail page */
+}
+
+/* --- THE BUTTON --- */
+.place-order-btn {
+    margin-top: 10px;
+    padding: 18px;
+    background-color: #fff; /* White button on dark background pops */
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.place-order-btn:hover:not(:disabled) {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.place-order-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Messaging */
+.checkout-message {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.checkout-message.success {
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.checkout-message.error {
+    color: #f44336;
+    background: rgba(244, 67, 54, 0.1);
+}

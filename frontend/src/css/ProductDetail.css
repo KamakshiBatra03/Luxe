@@ -1,0 +1,131 @@
+.detail-page-overlay {
+    background-color: #080808; /* Deep black background */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* The actual product card */
+.dark-product-card {
+    background: #121212; /* Slightly lighter matte grey card */
+    width: 100%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Split layout like reference */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* IMAGE AREA */
+.card-image-section {
+    background-color: #1a1a1a; /* Subtle contrast behind the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.focused-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Keeps whole garment visible like reference */
+    object-position: top; /* Ensures faces are visible if applicable */
+}
+
+/* INFO AREA */
+.card-info-section {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand-tag {
+    color: #666;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.product-title {
+    font-size: 2.8rem;
+    margin: 10px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.label {
+    font-size: 0.9rem;
+    color: #555;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.description-text {
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ACTIONS SECTION */
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.qty-input {
+    width: 60px;
+    padding: 10px;
+    background: #222;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+    flex: 2;
+    background-color: #d8435d; /* Pinkish-crimson from reference image */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #b0354a;
+    transform: translateY(-2px);
+}
+
+.favorite-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.back-link {
+    display: block;
+    margin-top: 30px;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.back-link:hover { color: #888; }

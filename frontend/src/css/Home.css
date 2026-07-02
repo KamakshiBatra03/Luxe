@@ -1,0 +1,80 @@
+/* src/css/Home.css */
+.home-wrapper {
+    background-color: #0f1111;
+    height: 100vh; /* Lock height to screen */
+    width: 100%;
+    overflow: hidden; /* This removes the scrollbar completely */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Category Grid */
+.featured-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    
+    /* Position these at the bottom of the screen */
+    position: absolute;
+    bottom: 150px; 
+    left: 25%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 1200px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.cat-card {
+   height: 140px; /* Slightly adjusted to ensure it fits mobile/laptop screens */
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cat-card button {
+   width: fit-content;
+    margin-top: 10px;
+    background: white; /* Made it a solid button like Suruchi image */
+    border: none;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.head{
+    font-size: xx-large;
+    font-weight: bold;
+}
+#star{
+    height:25px;
+}
+.headbelow{
+    font-size: medium;
+    font-weight: 300;
+}
+
+
+@media (max-width: 768px) {
+    .featured-categories { 
+        grid-template-columns: 1fr; 
+        bottom: 10px;
+        gap: 10px;
+    }
+    .cat-card { height: 80px; }
+}

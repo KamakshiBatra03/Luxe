@@ -1,0 +1,91 @@
+/* src/css/ProductCard.css */
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%; /* Fill the bento grid item */
+    width: 100%;
+}
+
+.bento-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes text to top, img to bottom */
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.card-info-top {
+    text-align: left;
+    z-index: 2;
+}
+
+.card-badge {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.card-title {
+    font-size: 1.6rem;
+    margin: 8px 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.card-price {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* The Pill Button from the reference image */
+.pill-button {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: inherit;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Light theme adjustment for the button */
+.bento-light .pill-button {
+    background: #000;
+    color: #fff;
+}
+
+.pill-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* Image Positioning */
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: auto; /* Ensures it stays at the bottom */
+}
+
+.bento-img {
+    max-width: 65%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* 3D Hover effect for images */
+.product-card-link:hover .bento-img {
+    transform: scale(1.1) translateY(-10px);
+}
